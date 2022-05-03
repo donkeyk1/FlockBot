@@ -35,18 +35,18 @@ client.on('messageCreate', message =>{
         message.channel.send(`Days since <@163440449925808129> has been funny: ` + (days|0));
     } else if (command == 'jiggs'){
         var days = calculateDifference(new Date("06/08/2002"));
-        message.channel.send(`Days since <@360488559309750273> has touched grass: ` + (days|0));
+        message.channel.send(`Days since <@360488559309750273> has felt the touch of a woman: ` + (days|0));
     } else if (command == 'donkey'){
         var days = calculateDifference(new Date("10/19/2002"));
         message.channel.send(`Days since <@225032479734628353> has had a personality: ` + (days|0));
     } else if (command == 'help'){
-        message.channel.send(`%help: Displays commands\n%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%nav: Generates a Tinman picture\n%veesh: Lets veesh know the right thing to do`);   
+        message.channel.send(`%help: Displays commands\n%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%nav: Generates a Tinman picture\n%veesh: Lets veesh know the right thing to do\n%yungbruh: The fog is coming`);   
     }else if (command == 'nav'){
         client.on('messageCreate',message=>"");
         const urls = ["https://imgur.com/GPwWlB5.jpeg", "https://i.imgur.com/0PzYk8v.jpeg","https://i.imgur.com/Yy7zZMy.jpeg","https://i.imgur.com/8dWeddP.jpeg","https://i.imgur.com/kStaLxE.jpeg", "https://i.imgur.com/iXXUOB4.jpeg"];
         const file = new MessageAttachment("./dinnerman pics/dinner1.jpg");
         const userEmbed = new MessageEmbed()
-        .setTitle('Dinnerman')
+        .setTitle('Tinman')
         .setImage(urls[Math.floor(Math.random()*urls.length)])
         message.channel.send({ embeds: [userEmbed], content:"This you? <@297099102989189121>" });
     } else if (command == 'veesh'){
