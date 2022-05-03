@@ -58,7 +58,7 @@ client.on('messageCreate', message =>{
         message.channel.send({ embeds: [numzEmbed], content:"<@257275595132502016> it's coming." });
     }else if (command == 'don'){
         var days = calculateDifference(new Date("10/11/2002"));
-        message.channel.send(`Days since <@272494999680188417> was straight: ` + (days|0));
+        message.channel.send(`Days of <@272494999680188417> straight masculinity: ` + (days|0));
         const donEmbed = new MessageEmbed()
         .setTitle('sherm')
         .setImage("https://i.imgur.com/44sFm9N.png")
