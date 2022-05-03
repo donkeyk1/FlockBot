@@ -6,7 +6,10 @@ const prefix = '%';
 
 const{token} = require("./config.json");
 
-const { MessageEmbed } = require("discord.js");
+const { MessageAttachment, MessageEmbed } = require("discord.js");
+
+const cheerio = require('cheerio');
+const request = require('request');
 
 function calculateDifference (date){
     var date2 = new Date();
@@ -37,9 +40,15 @@ client.on('message', message =>{
         var days = calculateDifference(new Date("10/19/2002"));
         message.channel.send(`Days since <@225032479734628353> has had a personality: ` + (days|0));
     } else if (command == 'help'){
-        message.channel.send(`%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%help: Displays commands\n`);
-        
+        message.channel.send(`%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%help: Displays commands\n`);   
+    }else if (command == 'nav'){
+        client.on('messageCreate',message=>"");
+        const file = new MessageAttachment("./dinnerman pics/dinner1.jpg");
+        const userEmbed = new MessageEmbed()
+        .setTitle('Dinnerman')
+        .setImage("https://imgur.com/GPwWlB5")
+        message.channel.send({ embeds: [userEmbed] });
     }
-});
+    });
 
 client.login(token);

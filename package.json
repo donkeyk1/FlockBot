@@ -9,6 +9,8 @@
   "author": "Donkey",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^13.6.0",
+    "request": "^2.88.2"
   }
 }
