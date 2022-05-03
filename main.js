@@ -22,7 +22,7 @@ client.once('ready', () =>{
     console.log('Flock Bot is online');
 });
 
-client.on('message', message =>{
+client.on('messageCreate', message =>{
     if(!message.content.startsWith(prefix) ||message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -40,15 +40,17 @@ client.on('message', message =>{
         var days = calculateDifference(new Date("10/19/2002"));
         message.channel.send(`Days since <@225032479734628353> has had a personality: ` + (days|0));
     } else if (command == 'help'){
-        message.channel.send(`%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%help: Displays commands\n`);   
+        message.channel.send(`%help: Displays commands\n%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%nav: Generates a Tinman picture\n%veesh: Lets veesh know the right thing to do`);   
     }else if (command == 'nav'){
         client.on('messageCreate',message=>"");
+        const urls = ["https://imgur.com/GPwWlB5.jpeg", "https://i.imgur.com/0PzYk8v.jpeg","https://i.imgur.com/Yy7zZMy.jpeg","https://i.imgur.com/8dWeddP.jpeg","https://i.imgur.com/kStaLxE.jpeg", "https://i.imgur.com/iXXUOB4.jpeg"];
         const file = new MessageAttachment("./dinnerman pics/dinner1.jpg");
         const userEmbed = new MessageEmbed()
         .setTitle('Dinnerman')
-        .setImage("https://imgur.com/GPwWlB5")
-        message.channel.send({ embeds: [userEmbed] });
+        .setImage(urls[Math.floor(Math.random()*urls.length)])
+        message.channel.send({ embeds: [userEmbed], content:"This you? <@297099102989189121>" });
+    } else if (command == 'veesh'){
+        message.channel.send(`<@428622485949513729> its okay. Let the kids out of the basement.`);
     }
     });
-
 client.login(token);
