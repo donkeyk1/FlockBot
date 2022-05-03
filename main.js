@@ -57,11 +57,11 @@ client.on('messageCreate', message =>{
         .setImage("https://i.imgur.com/NPaxtz8.jpeg")
         message.channel.send({ embeds: [numzEmbed], content:"<@257275595132502016> it's coming." });
     }else if (command == 'don'){
-        var days = calculateDifference(new Date("10/11/2002"));
-        message.channel.send(`Days since <@272494999680188417> was straight: ` + (days|0));
+        var days = calculateDifference(new Date("05/03/2002"));
+        message.channel.send(`Days <@272494999680188417> don has blessed us with his presence: ` + (days|0));
         const donEmbed = new MessageEmbed()
-        .setTitle('sherm')
-        .setImage("https://i.imgur.com/44sFm9N.png")
+        .setTitle('Chad')
+        .setImage("https://i.imgur.com/hmn7X3M.jpeg")
         message.channel.send({ embeds: [donEmbed],});
     }
     });
