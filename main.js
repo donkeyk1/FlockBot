@@ -40,7 +40,7 @@ client.on('messageCreate', message =>{
         var days = calculateDifference(new Date("10/19/2002"));
         message.channel.send(`Days since <@225032479734628353> has had a personality: ` + (days|0));
     } else if (command == 'help'){
-        message.channel.send(`%help: Displays commands\n%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%nav: Generates a Tinman picture\n%veesh: Lets veesh know the right thing to do\n%yungbruh: The fog is coming`);   
+        message.channel.send(`%help: Displays commands\n%raf: Makes fun of Raf\n%jiggs: Makes fun of Jiggs\n%donkey: Makes fun of Donkey\n%nav: Generates a Tinman picture\n%veesh: Lets veesh know the right thing to do\n%yungbruh: The fog is coming\n%don: Lets Don know his sexual prefrence`);   
     }else if (command == 'nav'){
         client.on('messageCreate',message=>"");
         const urls = ["https://imgur.com/GPwWlB5.jpeg", "https://i.imgur.com/0PzYk8v.jpeg","https://i.imgur.com/Yy7zZMy.jpeg","https://i.imgur.com/8dWeddP.jpeg","https://i.imgur.com/kStaLxE.jpeg", "https://i.imgur.com/iXXUOB4.jpeg"];
