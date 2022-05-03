@@ -51,6 +51,11 @@ client.on('messageCreate', message =>{
         message.channel.send({ embeds: [userEmbed], content:"This you? <@297099102989189121>" });
     } else if (command == 'veesh'){
         message.channel.send(`<@428622485949513729> its okay. Let the kids out of the basement.`);
+    }else if (command == 'yungbruh'){
+        const numzEmbed = new MessageEmbed()
+        .setTitle('The fog...')
+        .setImage("https://i.imgur.com/NPaxtz8.jpeg")
+        message.channel.send({ embeds: [numzEmbed], content:"<@257275595132502016> it's coming." });
     }
     });
 client.login(token);
